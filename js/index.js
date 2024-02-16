@@ -11,6 +11,10 @@ function continewGame(){
     addBgOnCurrentAlphabetKbd(alphabet)
 }
 
+function stopGame(){
+    hidePageById('play-ground')
+   showPageById('score-page')
+}
 document.addEventListener('keyup', function(event){
     const playerPress = event.key
     const screenAlphabet = document.getElementById('screen-alphabet')
@@ -29,5 +33,8 @@ document.addEventListener('keyup', function(event){
         const loselife = losevalue(life)
         const lifeId = document.getElementById('life')
         lifeId.innerText = loselife
+        if(loselife === 0){
+            stopGame()
+        }
     }
 })
