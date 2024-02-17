@@ -46,3 +46,11 @@ function losevalue(elementNumber){
     const addElementNumberValue = elementNumber - 1
     return addElementNumberValue
 }
+
+function setLastScore(){
+    const finalScore = document.getElementById('final-score')
+    const score = document.getElementById('score')
+    const scoreValue = score.innerText
+    finalScore.innerText = scoreValue
+    
+}
